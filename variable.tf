@@ -51,5 +51,5 @@ variable "fargate_memory" {
 
 variable "tag" {
   description = "tagging the resources"
-  default = "test"
+  default = "master"
 }
