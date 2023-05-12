@@ -15,7 +15,7 @@ This repository using for RDS PostgreSQL database Table  data upload to S3 bucke
 ## Prerequisites
 
 The following artifacts must be setup prior to running the code:
-
+* AWS CLI. 
 * RDS PostgreSQL Database. 
 * Python script (connect to RDS postgresSQL Database table conver to CSV formate)
 * yaml script (specify column name and table details)
