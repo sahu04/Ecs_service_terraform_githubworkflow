@@ -54,8 +54,8 @@ The following environment variable needs to be set in prior to execution. On AWS
 * `RDS_PASSWORD`: RDS PostgreSQL password
 * `RDS_PORT`: RDS PostgreSQL port
 * `RDS_DBNAME`: RDS PostgreSQL dbname
-* `SOURCE_BUCKET`: Source Bucket name 
-* `DESTINATION_BUCKET`: Destination Bucket name
+* `SOURCE_BUCKET`: Source Bucket name (Prod)
+* `DESTINATION_BUCKET`: Destination Bucket name(Non-Prod)
 * `DESTINATION_PREFIX`: Destination Prefix
 
 
