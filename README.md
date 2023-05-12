@@ -1,7 +1,6 @@
 # DSI-Automation
 
-This repository using for RDS PostgreSQL database Table  data upload to S3 bucket in CSV Formate.
-
+This repository using for the process automate  transformation of table data from a PostgreSQL database and subsequently export it as CSV files. These CSV files can then be easily uploaded to an S3 bucket.The process involves establishing a connection to the PostgreSQL database, executing queries to retrieve the desired table data, and formatting the data into CSV format.
 
 ## Repository Contains
 
