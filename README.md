@@ -23,7 +23,7 @@ The following artifacts must be setup prior to running the code:
 * Secret manager (entry with name "DSI-postgress-DB" to load env variables)
 
 ##  table.yaml script
-this script contains the tables and columns deatsils from RDS PostgreSQL database table :
+this script contains the tables and columns deatsils from RDS PostgreSQL database table The structure of the YAML file is designed to define a list of tables, where each table has a name and a list of associated columns.
 
 ```
 tables:
@@ -33,7 +33,7 @@ tables:
       - column2
 ```
 
-## What is within a Python script
+## Python script
 
 Python file containing the code. This file serves as the main script responsible for connecting to the PostgreSQL database, executing queries, exporting data to CSV files, and uploading them to the specified S3 bucket.
 
