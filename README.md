@@ -58,63 +58,6 @@ The following environment variable needs to be set in prior to execution. On AWS
 * `DESTINATION_BUCKET`: Destination Bucket name
 * `DESTINATION_PREFIX`: Destination Prefix
 
-connect to s3 bucket with AWS credentials execute query:
-```
-  BUCKET_NAME=SOURCE_BUCKET
-  s3_client = boto3.client('s3')
 
-```
-
-Load the tables and columns from the`tables.yaml` scripts.
-
-```
-  with open('tables.yaml', 'r') as f:
-    tables = yaml.safe_load(f)['tables']
-```
-    
- Loop through the tables and columns, Data export them to CSV format
- ```
-for table in tables:
-    name = table['name']
-    columns = ','.join(table['columns'])
-     logging.info(f'Exporting table {name}...')
-
-```
- database tables data  rows & Column upload  to a CSV file
-```
- with open(f'{name}.csv', 'w') as f:
-        # Write the header row
-        header = [col.strip() for col in columns.split(',')]
-        f.write(','.join(header) + '\n')
-
- rows = cur.fetchall()
-        for row in rows:
-            row = [str(col) if ',' not in str(col) else f'"{col}"' for col in row]
-            f.write(', '.join(row) + '\n') 
-  
- 
-```
-
-Upload the data from PostgrSQL database in format CSV file to S3_Bucket
-
-```
-logging.info(f'Uploading {name}.csv to S3...')
-    s3_client.upload_file(f'{name}.csv', BUCKET_NAME, f'{DESTINATION_PREFIX}/{name}.csv')
-```
-    
-
-
-Sync database tables data into s3 bucket with another S3 Bucket:
-
-`Prefix`: Bucket_folder name
-
-```
-    logging.info(f'Syncing S3 bucket {BUCKET_NAME} with another bucket...')
-    for obj in s3_client.list_objects(Bucket=BUCKET_NAME, Prefix='Bucket_folder')['Contents']:
-        obj_key = obj['Key']
-        dest_key = obj_key.replace('Bucket_folder', '')
-        copy_source = {'Bucket': BUCKET_NAME, 'Key': obj_key}
-        s3_client.copy_object(Bucket=DESTINATION_BUCKET, CopySource=copy_source, Key=f'{DESTINATION_PREFIX}/{dest_key}')
-```
     
 
