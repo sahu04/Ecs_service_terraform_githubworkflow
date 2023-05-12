@@ -62,7 +62,7 @@ connect to s3 bucket with AWS credentials execute query:
 
 Load the tables and columns from the YAML file
 
-```bash
+```
   with open('tables.yaml', 'r') as f:
     tables = yaml.safe_load(f)['tables']
 ```
