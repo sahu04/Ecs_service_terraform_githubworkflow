@@ -59,7 +59,7 @@ The following environment variable needs to be set in prior to execution. On AWS
 * `DESTINATION_PREFIX`: Destination Prefix
 
 ## Jenkinsfile
- when we export data into S3 Bucket destination prefix variable should be updated in the Jenkinsfile.
+ when we export data into S3 Bucket `destination prefix` variable should be updated in the Jenkinsfile.
 ```
 {enviroment
  DESTINATION_PREFIX = "data-dump/MMYYYY"
