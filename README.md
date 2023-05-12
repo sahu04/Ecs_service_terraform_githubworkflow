@@ -1,6 +1,6 @@
 # DSI-Automation
 
-This repository using for the connection is established to the PostgreSQL database. Then, queries are executed to retrieve the desired table data. The retrieved data is then formatted into CSV format & the resulting CSV files data  can be uploaded to an S3 bucket.
+This repository is being used  for the connection to be established into PostgreSQL database. After that, the queries are executed to retrieve the desired table data. The retrieved data is formatted into CSV format and the resulting CSV files are uploaded to S3 bucket.
 
 ## Repository Contains
 
@@ -22,7 +22,7 @@ The following artifacts must be setup prior to running the code:
 * Secret manager (entry with name "DSI-postgress-DB" to load env variables)
 
 ##  tables.yaml script
-this script contains the tables and columns deatsils from RDS PostgreSQL database table The structure of the YAML file is designed to define a list of tables, where each table has a name and a list of associated columns.
+this script contains the tables and columns deatails from RDS PostgreSQL database table The structure of the YAML file is designed to define a list of tables, where each table has a name and a list of associated columns.
 
 ```
 tables:
@@ -58,6 +58,11 @@ The following environment variable needs to be set in prior to execution. On AWS
 * `DESTINATION_BUCKET`: Destination Bucket name(Non-Prod)
 * `DESTINATION_PREFIX`: Destination Prefix
 
-
-    
+## Jenkinsfile
+whenever we are going to export the query data to s3 bucket this destination prefix veriable needs to be updated in Jenkinsfile.
+```
+{enviroment
+ DESTINATION_PREFIX = "data-dump/MMYYYY"
+}
+   ``` 
 
