@@ -16,9 +16,9 @@ This repository using for the process automate  transformation of table data fro
 The following artifacts must be setup prior to running the code:
 * AWS CLI. 
 * RDS PostgreSQL Database. 
-* Python script (connect to RDS postgresSQL Database table convert to CSV formate)
+* Python script (connect to RDS postgresSQL Database table convert to CSV format)
 * yaml script (specify column name and table details)
-* S3 bucket that will contain RDS PostgresSQL data under the `data-dump/` Folder in CSV Formate.
+* S3 bucket that will contain RDS PostgresSQL data under the `data-dump/` Folder in CSV Format.
 * Secret manager (entry with name "DSI-postgress-DB" to load env variables)
 
 ##  tables.yaml script
@@ -40,7 +40,7 @@ Python file containing the code. This file serves as the main script responsible
 
 Install Python Modules to run script
 
-```bash
+```
  pip install psycopg2
  pip install boto3
  pip install pyyaml
