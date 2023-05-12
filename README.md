@@ -1,6 +1,6 @@
 # DSI-Automation
 
-This repository using for the process automate  transformation of table data from a PostgreSQL database and subsequently export it as CSV files. These CSV files can then be easily uploaded to an S3 bucket.The process involves establishing a connection to the PostgreSQL database, executing queries to retrieve the desired table data, and formatting the data into CSV format.
+This repository using for the connection is established to the PostgreSQL database. Then, queries are executed to retrieve the desired table data. The retrieved data is then formatted into CSV format & the resulting CSV files data  can be uploaded to an S3 bucket.
 
 ## Repository Contains
 
