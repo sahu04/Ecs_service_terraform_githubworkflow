@@ -96,7 +96,7 @@ for table in tables:
  
 ```
 
-Upload the data from PostgrSQL database in formate CSV file to S3_Bucket
+Upload the data from PostgrSQL database in format CSV file to S3_Bucket
 
 ```
 logging.info(f'Uploading {name}.csv to S3...')
