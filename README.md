@@ -1,6 +1,6 @@
 # DSI-Automation
 
-This repository is being used  for the connection to be established into PostgreSQL database. After that, the queries are executed to retrieve the desired table data. The retrieved data is formatted into CSV format and the resulting CSV files are uploaded to S3 bucket.
+This repository is used  for establishing connection into PostgreSQL database. After that, the queries are executed to retrieve the desired table data. The retrieved data is formatted into CSV format and the resulting CSV files are uploaded to S3 bucket.
 
 ## Repository Contains
 
@@ -59,7 +59,7 @@ The following environment variable needs to be set in prior to execution. On AWS
 * `DESTINATION_PREFIX`: Destination Prefix
 
 ## Jenkinsfile
-whenever we are going to export the query data to s3 bucket this destination prefix veriable needs to be updated in Jenkinsfile.
+ when we export data into S3 Bucket destination prefix variable should be updated in the Jenkinsfile.
 ```
 {enviroment
  DESTINATION_PREFIX = "data-dump/MMYYYY"
