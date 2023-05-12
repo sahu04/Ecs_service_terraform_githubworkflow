@@ -94,23 +94,28 @@ for table in tables:
             f.write(', '.join(row) + '\n') 
   
  
-Upload the data from PostgrSQL database in formate CSV file to S3_Bucket
 ```
- logging.info(f'Uploading {name}.csv to S3...')
+
+Upload the data from PostgrSQL database in formate CSV file to S3_Bucket
+
+```
+logging.info(f'Uploading {name}.csv to S3...')
     s3_client.upload_file(f'{name}.csv', BUCKET_NAME, f'{DESTINATION_PREFIX}/{name}.csv')
 ```
+    
 
-Sync database tables data into s3 bucket with another S3 Bucket
+
+Sync database tables data into s3 bucket with another S3 Bucket:
+
+`Prefix`: Bucket_folder name
 
 ```
-logging.info(f'Syncing S3 bucket {BUCKET_NAME} with another bucket...')
-    for obj in s3_client.list_objects(Bucket=BUCKET_NAME, Prefix='data-dump/052023')['Contents']:
+    logging.info(f'Syncing S3 bucket {BUCKET_NAME} with another bucket...')
+    for obj in s3_client.list_objects(Bucket=BUCKET_NAME, Prefix='Bucket_folder')['Contents']:
         obj_key = obj['Key']
-        dest_key = obj_key.replace('data-dump/052023/', '')
+        dest_key = obj_key.replace('Bucket_folder', '')
         copy_source = {'Bucket': BUCKET_NAME, 'Key': obj_key}
         s3_client.copy_object(Bucket=DESTINATION_BUCKET, CopySource=copy_source, Key=f'{DESTINATION_PREFIX}/{dest_key}')
-    
-logging.info('Export complete.')
 ```
     
 
