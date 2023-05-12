@@ -8,7 +8,7 @@ This repository using for RDS PostgreSQL database Table  data upload to S3 bucke
 - [Jenkinsfile](#Jenkinsfile)
 - [Dockerfile](#Dockerfile)
 - [export_data.py](#export_data.py)
-- [table.yaml](#table.yaml)
+  - [table.yaml](#table.yaml)
 - [taskdef_template.json](#taskdef_template.json)
 
 
