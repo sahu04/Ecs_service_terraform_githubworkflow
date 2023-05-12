@@ -35,7 +35,7 @@ tables:
 
 ## What is within a Python script
 
-Python file containing the code snippet you provided. This file serves as the main script responsible for connecting to the PostgreSQL database, executing queries, exporting data to CSV files, and uploading them to the specified S3 bucket.
+Python file containing the code. This file serves as the main script responsible for connecting to the PostgreSQL database, executing queries, exporting data to CSV files, and uploading them to the specified S3 bucket.
 
 ## Installation
 
