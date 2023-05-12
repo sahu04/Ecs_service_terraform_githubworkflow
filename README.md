@@ -35,7 +35,7 @@ tables:
 
 ## What is within a Python script
 
-Python script that exports data from a PostgreSQL database hosted on Amazon RDS (Relational Database Service) to CSV files and uploads them to an S3 bucket. 
+Python file containing the code snippet you provided. This file serves as the main script responsible for connecting to the PostgreSQL database, executing queries, exporting data to CSV files, and uploading them to the specified S3 bucket.
 
 ## Installation
 
